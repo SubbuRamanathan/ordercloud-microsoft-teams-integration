@@ -1,0 +1,16 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "${themeColor}",
+    "summary": "${title}",
+    "sections": [{
+        "activityTitle": "${title}",
+        "activitySubtitle": "${subtitle}",
+        "activityImage": "${image}",
+        "facts": [],
+        "markdown": true
+    }],
+    "potentialAction": []
+}

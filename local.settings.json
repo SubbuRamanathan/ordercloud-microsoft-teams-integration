@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "00000000-0000-0000-0000-000000000000",
+    "TemplateType": "classic"
+  }
+}

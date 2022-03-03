@@ -1,0 +1,7 @@
+{
+    "@type": "OpenUri",
+    "name": "${name}",
+    "targets": [
+      { "os": "default", "uri": "${url}" }
+    ]
+}
