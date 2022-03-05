@@ -1,6 +1,7 @@
 const appInsights = require("applicationinsights");
 const teamsWebhook = require("./modules/webhook.js");
 const message = require("./modules/message.js");
+const { isValidRequest } = require("./modules/validation.js");
 
 appInsights.setup();
 const client = appInsights.defaultClient;
@@ -10,11 +11,11 @@ module.exports = async function (context, request) {
     let status;
     var operationIdOverride = {"ai.operation.id":context.traceContext.traceparent};
 
-    if (request.body) {
+    const apiResponseDetails = request.body;
+    if (apiResponseDetails && isValidRequest(apiResponseDetails)) {
         try {
-            const messageCard = message.compose(request);
-            teamsWebhook.send(request.body.ConfigData.webhook, messageCard);
-            responseMessage = 'Notification posted to Teams successfully!';
+            const messageCard = message.compose(request, operationIdOverride);
+            responseMessage = teamsWebhook.send(apiResponseDetails.ConfigData.webhook, messageCard);
             status = 200;
             client.trackTrace({message: responseMessage, tagOverrides:operationIdOverride});
         } catch (error) {
@@ -24,7 +25,7 @@ module.exports = async function (context, request) {
         }
     }
     else{
-        responseMessage = 'Expected parameters are not found in the Payload!';
+        responseMessage = 'Invalid Request!';
         client.trackException({exception: new Error(responseMessage), tagOverrides:operationIdOverride});
     }
     context.res = {
