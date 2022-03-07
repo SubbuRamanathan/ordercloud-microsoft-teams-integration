@@ -8,7 +8,7 @@ exports.send = function(config, accessToken, operationIdOverride){
         ordercloud.invoke(parseQuery(config.query), accessToken).then(apiResponse => {
             apiResponse.data.Items.forEach(result => {
                 const messageCard = composeMessage(config.template, result);
-                teamsWebhook.send(config.webhook, messageCard);
+                teamsWebhook.send(config.connectorUrl, messageCard);
             });
         });
     }
