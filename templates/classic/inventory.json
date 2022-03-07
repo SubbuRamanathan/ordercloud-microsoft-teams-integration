@@ -48,7 +48,7 @@
         },
         {
             "@type": "OpenUri",
-            "name": "Contact Supplier User",
+            "name": "Contact Supplier",
             "targets": [
               { "os": "default", "uri": "http://seller.headstart.localhost/suppliers/${DefaultSupplierID}/users" }
             ]

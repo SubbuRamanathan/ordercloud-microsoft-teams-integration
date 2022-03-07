@@ -1,4 +1,4 @@
-const ordercloud = require("./ordercloud.js");
+const ordercloud = require("../../modules/ordercloud.js");
 const teamsWebhook = require("../../modules/webhook.js");
 const log = require("../../modules/log");
 const { replaceParams, replaceJSONParams, getMessageTemplate, applyAppearances } = require("../../modules/utils.js");
@@ -18,9 +18,8 @@ exports.send = function(config, accessToken, operationIdOverride){
 }
 
 const composeMessage = function(templateName, result){
-    const settings = require(`${__dirname}\\..\\settings.json`);
     const messageCard = replaceJSONParams(getMessageTemplate(templateName), result);
-    return applyAppearances(messageCard, settings);
+    return applyAppearances(messageCard);
 }
 
 const parseQuery = function(query){
