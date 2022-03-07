@@ -18,8 +18,9 @@ exports.send = function(config, accessToken, operationIdOverride){
 }
 
 const composeMessage = function(templateName, result){
+    const settings = require(`${__dirname}\\..\\settings.json`);
     const messageCard = replaceJSONParams(getMessageTemplate(templateName), result);
-    return applyAppearances(messageCard);
+    return applyAppearances(messageCard, settings);
 }
 
 const parseQuery = function(query){
