@@ -1,0 +1,80 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
+    "sections": [
+        {
+            "activityTitle": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
+            "activitySubtitle": "You can view/update/extend the promotions from the actions below",
+            "activityImage": "",
+            "facts": [
+                {
+                    "name": "Code",
+                    "value": "${Code}"
+                },
+                {
+                    "name": "Description",
+                    "value": "${Description}"
+                },
+                {
+                    "name": "Redemption Count",
+                    "value": "RedemptionCount"
+                },
+                {
+                    "name": "Start Date",
+                    "value": "${StartDate}"
+                },
+                {
+                    "name": "Expiration Date",
+                    "value": "${ExpirationDate}"
+                }
+            ],
+            "markdown": true
+        }
+    ],
+    "potentialAction": [
+        {
+            "@type": "OpenUri",
+            "name": "View/Edit Promotion",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "http://seller.headstart.localhost/promotions/${ID}"
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "View All Promotions",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "http://seller.headstart.localhost/promotions"
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Go to Site",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "http://buyer.headstart.localhost/"
+                }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Request Indexing",
+            "targets": [
+                {
+                    "os": "default",
+                    "uri": "https://www.google.com/ping?sitemap=https%3a%2f%2fbuyer.headstart.localhost%2fsitemap.xml"
+                }
+            ]
+        }
+    ]
+}

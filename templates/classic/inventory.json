@@ -1,0 +1,57 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: A Product('${Name}') is running low on stock!",
+    "sections": [{
+        "activityTitle": "Reminder: A Product('${Name}') is running low on stock!",
+        "activitySubtitle": "You can update inventory or contact supplier from the actions below",
+        "activityImage": "",
+        "facts": [{
+            "name": "Name",
+            "value": "${Name}"
+            },
+            {
+                "name": "Quantity Available",
+                "value": "${Inventory.QuantityAvailable}"
+            },
+            {
+                "name": "ID",
+                "value": "${ID}"
+            },
+            {
+                "name": "Active",
+                "value": "${Active}"
+            },
+            {
+                "name": "Inventory Last Updated",
+                "value": "${Inventory.LastUpdated}"
+            }
+        ],
+        "markdown": true
+    }],
+    "potentialAction": [{
+            "@type": "OpenUri",
+            "name": "Update Inventory",
+            "targets": [
+            { "os": "default", "uri": "http://seller.headstart.localhost/products/${ID}" }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "View Product",
+            "targets": [
+              { "os": "default", "uri": "http://buyer.headstart.localhost/products/${ID}" }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Contact Supplier User",
+            "targets": [
+              { "os": "default", "uri": "http://seller.headstart.localhost/suppliers/${DefaultSupplierID}/users" }
+            ]
+        }
+    ]
+}

@@ -1,10 +1,9 @@
-const appInsights = require("applicationinsights");
-const teamsWebhook = require("./modules/webhook.js");
-const message = require("./modules/message.js");
+const teamsWebhook = require("../modules/webhook.js");
+const updateNotificationMessage = require("./modules/message.js");
+const log = require("../modules/log.js");
 const { isValidRequest } = require("./modules/validation.js");
 
-appInsights.setup();
-const client = appInsights.defaultClient;
+log.setup();
 
 module.exports = async function (context, request) {
     let responseMessage = '';
@@ -14,19 +13,20 @@ module.exports = async function (context, request) {
     const apiResponseDetails = request.body;
     if (apiResponseDetails && isValidRequest(apiResponseDetails)) {
         try {
-            const messageCard = message.compose(request, operationIdOverride);
+            const messageCard = updateNotificationMessage.compose(request, operationIdOverride);
             responseMessage = teamsWebhook.send(apiResponseDetails.ConfigData.webhook, messageCard);
             status = 200;
-            client.trackTrace({message: responseMessage, tagOverrides:operationIdOverride});
-        } catch (error) {
+            log.trace(responseMessage, operationIdOverride);
+        } 
+        catch (error) {
             error.message = `Failed to post the notification to Teams. Following error was encountered during the execution: \n${error.message}`;
             responseMessage = error.message;
-            client.trackException({exception: error, tagOverrides:operationIdOverride});
+            log.exception(error, operationIdOverride);
         }
     }
     else{
         responseMessage = 'Invalid Request!';
-        client.trackException({exception: new Error(responseMessage), tagOverrides:operationIdOverride});
+        log.exception(new Error(responseMessage), operationIdOverride);
     }
     context.res = {
         body: responseMessage,

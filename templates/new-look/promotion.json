@@ -1,0 +1,57 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
+    "sections": [
+        {
+            "activityTitle": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
+            "activitySubtitle": "You can view/update/extend the promotions from the actions below",
+            "activityImage": "",
+            "facts": [{
+                    "name": "",
+                    "value": "<div><div style=\"overflow:hidden;position:absolute;right:0px;\"><img width=\"1\" height=\"1\" style=\"position:relative;opacity:0.4;display:block;\" src=\"${backgroundImageUrl}\"></img></div><div style=\"top: 0px;left: 0px;position: absolute;width: 100%;height: 100%;border: white 2px solid;\"></div></div>"
+                },
+                {
+                    "name": "Code",
+                    "value": "<div style=\"position:relative;\" title=\"${Code}\">${Code}</div>"
+                },
+                {
+                    "name": "Description",
+                    "value": "<div style=\"position:relative;\" title=\"${Description}\">${Description}</div>"
+                },
+                {
+                    "name": "Redemption Count",
+                    "value": "<div style=\"position:relative;\" title=\"${RedemptionCount}\">${RedemptionCount}</div>"
+                },
+                {
+                    "name": "Start Date",
+                    "value": "<div style=\"position:relative;\" title=\"${StartDate}\">${StartDate}</div>"
+                },
+                {
+                    "name": "Expiration Date",
+                    "value": "<div style=\"position:relative;\" title=\"${ExpirationDate}\">${ExpirationDate}</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"position:absolute;left:18px;bottom:10px;\"><a href=\"http://seller.headstart.localhost/promotions/${ID}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">View/Edit Promotion &#x279C;</a>&nbsp;<a href=\"http://seller.headstart.localhost/promotions}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">View All Promotions &#x279C;</a>&nbsp;<a href=\"http://buyer.headstart.localhost/\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Go to Site &#x279C;</a>&nbsp;<a href=\"https://www.google.com/ping?sitemap=https%3a%2f%2fbuyer.headstart.localhost%2fsitemap.xml\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Request Indexing &#x279C;</a>&nbsp;</div>"
+                }
+            ],
+            "markdown": true
+        }
+    ]
+}

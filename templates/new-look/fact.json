@@ -1,0 +1,4 @@
+{
+    "name": "${name}",
+    "value": "<div style=\"position:relative;\" title=\"${value}\">${value}</div>"
+}

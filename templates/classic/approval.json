@@ -1,0 +1,61 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: An Order('${ID}') is awaiting approval!",
+    "sections": [{
+        "activityTitle": "Reminder: An Order('${ID}') is awaiting approval!",
+        "activitySubtitle": "You can approve/decline/view the orders from the actions below",
+        "activityImage": "",
+        "facts": [{
+            "name": "Total",
+            "value": "${Total}"
+            },
+            {
+                "name": "Promotion Discount",
+                "value": "${PromotionDiscount}"
+            },
+            {
+                "name": "Status",
+                "value": "${Status}"
+            },
+            {
+                "name": "Date Created",
+                "value": "${DateCreated}"
+            },
+            {
+                "name": "Date Submitted",
+                "value": "${DateSubmitted}"
+            },
+            {
+                "name": "Comments",
+                "value": "${Comments}"
+            }
+        ],
+        "markdown": true
+    }],
+    "potentialAction": [{
+            "@type": "OpenUri",
+            "name": "Approve/Decline Order",
+            "targets": [
+            { "os": "default", "uri": "http://buyer.headstart.localhost/orders/approve/${ID}" }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "View/Edit Order",
+            "targets": [
+              { "os": "default", "uri": "http://buyer.headstart.localhost/orders/${ID}" }
+            ]
+        },
+        {
+            "@type": "OpenUri",
+            "name": "Contact Buyer User",
+            "targets": [
+              { "os": "default", "uri": "mailto:${FromUser.Email}" }
+            ]
+        }
+    ]
+}

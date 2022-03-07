@@ -5,7 +5,7 @@ exports.send = async function (teamsWebhookUrl, messageCard) {
     if(!messageCard)
       throw new Error('Message Card is Empty');
 
-    const response = await axios.post(teamsWebhookUrl, messageCard, {
+    await axios.post(teamsWebhookUrl, messageCard, {
       headers: { 'content-type': 'application/json' },
     });
     return 'Notification posted to Teams successfully!';

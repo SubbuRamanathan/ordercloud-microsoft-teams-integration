@@ -1,0 +1,58 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: A Product('${Name}') is running low on stock!",
+    "sections": [
+        {
+            "activityTitle": "Reminder: A Product('${Name}') is running low on stock!",
+            "activitySubtitle": "You can update inventory or contact supplier from the actions below",
+            "activityImage": "",
+            "facts": [
+                {
+                    "name": "",
+                    "value": "<div><div style=\"overflow:hidden;position:absolute;right:0px;\"><img width=\"1\" height=\"1\" style=\"position:relative;opacity:0.4;display:block;\" src=\"${backgroundImageUrl}\"></img></div><div style=\"top: 0px;left: 0px;position: absolute;width: 100%;height: 100%;border: white 2px solid;\"></div></div>"
+                },
+                {
+                    "name": "Name",
+                    "value": "<div style=\"position:relative;\" title=\"${Name}\">${Name}</div>"
+                },
+                {
+                    "name": "Quantity Available",
+                    "value": "<div style=\"position:relative;\" title=\"${Inventory.QuantityAvailable}\">${Inventory.QuantityAvailable}</div>"
+                },
+                {
+                    "name": "ID",
+                    "value": "<div style=\"position:relative;\" title=\"${ID}\">${ID}</div>"
+                },
+                {
+                    "name": "Active",
+                    "value": "<div style=\"position:relative;\" title=\"${Active}\">${Active}</div>"
+                },
+                {
+                    "name": "Inventory Last Updated",
+                    "value": "<div style=\"position:relative;\" title=\"${Inventory.LastUpdated}\">${Inventory.LastUpdated}</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"color:white\">.</div>"
+                },
+                {
+                    "name": "",
+                    "value": "<div style=\"position:absolute;left:18px;bottom:10px;\"><a href=\"http://seller.headstart.localhost/products/${ID}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Update Inventory &#x279C;</a>&nbsp;<a href=\"http://buyer.headstart.localhost/products/${ID}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">View Product &#x279C;</a>&nbsp;<a href=\"http://seller.headstart.localhost/suppliers/${DefaultSupplierID}/users\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Contact Supplier User &#x279C;</a>&nbsp;</div>"
+                }
+            ],
+            "markdown": true
+        }
+    ]
+}

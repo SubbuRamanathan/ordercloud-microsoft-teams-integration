@@ -1,0 +1,58 @@
+{
+    "@context": "http://schema.org/extensions",
+    "@type": "MessageCard",
+    "originator": "",
+    "hideOriginalBody": "true",
+    "themeColor": "ffc107",
+    "summary": "Reminder: An Order('${ID}') is awaiting approval!",
+    "sections": [{
+        "activityTitle": "Reminder: An Order('${ID}') is awaiting approval!",
+        "activitySubtitle": "You can approve/decline/view the orders from the actions below",
+        "activityImage": "",
+        "facts": [{
+                "name": "",
+                "value": "<div><div style=\"overflow:hidden;position:absolute;right:0px;\"><img width=\"1\" height=\"1\" style=\"position:relative;opacity:0.4;display:block;\" src=\"${backgroundImageUrl}\"></img></div><div style=\"top: 0px;left: 0px;position: absolute;width: 100%;height: 100%;border: white 2px solid;\"></div></div>"
+            },{
+                "name": "Total",
+                "value": "<div style=\"position:relative;\" title=\"${Total}\">${Total}</div>"
+            },
+            {
+                "name": "Promotion Discount",
+                "value": "<div style=\"position:relative;\" title=\"${PromotionDiscount}\">${PromotionDiscount}</div>"
+            },
+            {
+                "name": "Status",
+                "value": "<div style=\"position:relative;\" title=\"${Status}\">${Status}</div>"
+            },
+            {
+                "name": "Date Created",
+                "value": "<div style=\"position:relative;\" title=\"${DateCreated}\">${DateCreated}</div>"
+            },
+            {
+                "name": "Date Submitted",
+                "value": "<div style=\"position:relative;\" title=\"${DateSubmitted}\">${DateSubmitted}</div>"
+            },
+            {
+                "name": "Comments",
+                "value": "<div style=\"position:relative;\" title=\"${Comments}\">${Comments}</div>"
+            },
+            {
+                "name": "",
+                "value": "<div style=\"color:white\">.</div>"
+            },
+            {
+                "name": "",
+                "value": "<div style=\"color:white\">.</div>"
+            },
+            {
+                "name": "",
+                "value": "<div style=\"color:white\">.</div>"
+            },
+            {
+                "name": "",
+                "value": "<div style=\"position:absolute;left:18px;bottom:10px;\"><a href=\"http://buyer.headstart.localhost/orders/approve/${ID}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Approve/Decline Order &#x279C;</a>&nbsp;<a href=\"http://buyer.headstart.localhost/orders/${ID}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">View/Edit Order &#x279C;</a>&nbsp;<a href=\"mailto:${FromUser.Email}\" style=\"border-radius:3px;box-shadow:0 4px 5px rgba(0,0,0,.3);display: inline-block !important;font: 700 12px/30px Helvetica, Clean, sans-serif;padding: 0 10px;text-decoration: none;text-shadow: 0 0 0 ${buttonTextColor};background-color: white;background-color:${buttonBackgroundColor} !important;color: transparent;margin-bottom: 5px;\">Contact Buyer User &#x279C;</a>&nbsp;</div>"
+            }
+        ],
+        "markdown": true
+    }]
+}

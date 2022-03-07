@@ -1,10 +1,18 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "node",
     "APPINSIGHTS_INSTRUMENTATIONKEY": "00000000-0000-0000-0000-000000000000",
-    "TemplateType": "classic",
-    "IncludeLogID": true
+    "ORDERCLOUD_API_HOST": "https://sandboxapi.ordercloud.io",
+    "ORDERCLOUD_API_CLIENTID": "420CB3C3-0952-437A-BF20-E2C71213F07D",
+    "ORDERCLOUD_API_CLIENTSECRET": "zjGJBKu8A7utF2AUVau0qCvKZPPTRZ6ujDDsJ5CfnNob5k0JsyIuwkhQqp7u",
+    "TemplateType": "new-look",
+    "ButtonTextColor": "#192d37",
+    "ButtonBackgroundColor": "#65acc8",
+    "NotificationBackgroundImage": "https://raw.githubusercontent.com/SubbuRamanathan/sitecore-microsoft-teams-integration/main/src/Sitecore.MicrosoftTeams.Integration/sitecore%20modules/MicrosoftTeamsIntegration/teams-background.png",
+    "IncludeLogIDInNotifications": true,
+    "ReminderNotificationsLimitPerScheduledRun": 20,
+    "AzureWebJobs.Reminders-TimerTrigger.Disabled": "false"
   }
 }
