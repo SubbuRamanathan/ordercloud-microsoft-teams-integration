@@ -1,0 +1,6 @@
+{
+  "ButtonTextColor": "#192d37",
+  "ButtonBackgroundColor": "#65acc8",
+  "NotificationBackgroundImage": "https://raw.githubusercontent.com/SubbuRamanathan/sitecore-microsoft-teams-integration/main/src/Sitecore.MicrosoftTeams.Integration/sitecore%20modules/MicrosoftTeamsIntegration/teams-background.png",
+  "IncludeLogIDInNotifications": true
+}

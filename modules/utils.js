@@ -15,11 +15,11 @@ const replaceParams = function (message, args) {
 }
 exports.replaceParams = replaceParams;
 
-exports.applyAppearances = function (messageCard) {
+exports.applyAppearances = function (messageCard, settings) {
   return replaceJSONParams(messageCard, {
-    buttonTextColor: process.env.ButtonTextColor,
-    buttonBackgroundColor: process.env.ButtonBackgroundColor,
-    backgroundImageUrl: process.env.NotificationBackgroundImage
+    buttonTextColor: settings.ButtonTextColor,
+    buttonBackgroundColor: settings.ButtonBackgroundColor,
+    backgroundImageUrl: settings.NotificationBackgroundImage
   });
 }
 

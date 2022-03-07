@@ -9,8 +9,9 @@ exports.compose = function (request, operationIdOverride) {
     const messageCardInfo = getMessageCardInfo(request, operationIdOverride);
     let messageCard = getMessageTemplate(request.body.ConfigData.template);
     messageCard = replaceJSONParams(messageCard, messageCardInfo);
-
-    if(process.env.TemplateType == 'classic'){
+    
+    const settings = require(`${__dirname}\\..\\settings.json`);
+    if(settings.TemplateType == 'classic'){
       messageCard.sections[0].facts = messageCardInfo.facts;
       messageCard.potentialAction = JSON.parse(`[${messageCardInfo.actions.join(',')}]`);
     }
@@ -21,7 +22,7 @@ exports.compose = function (request, operationIdOverride) {
       });
     }
 
-    return applyAppearances(messageCard);
+    return applyAppearances(messageCard, settings);
   }
   catch (error) {
     error.message = `Encountered an exception while composing message for ${apiResponseDetails.Route}. \n${error.message}`;

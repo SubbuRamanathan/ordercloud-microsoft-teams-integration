@@ -1,4 +1,4 @@
-const ordercloud = require("../../modules/ordercloud.js");
+const ordercloud = require("./ordercloud.js");
 const teamsWebhook = require("../../modules/webhook.js");
 const log = require("../../modules/log");
 const { replaceParams, replaceJSONParams, getMessageTemplate, applyAppearances } = require("../../modules/utils.js");

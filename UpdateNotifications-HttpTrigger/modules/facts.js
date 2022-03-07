@@ -39,7 +39,8 @@ const getFacts = function (apiResponseDetails) {
     }
   }
 
-  if (process.env.IncludeLogIDInNotifications)
+  const settings = require(`${__dirname}\\..\\settings.json`);
+  if (settings.IncludeLogIDInNotifications)
     factsInfo.push({
       name: 'LogID',
       value: apiResponseDetails.LogID
