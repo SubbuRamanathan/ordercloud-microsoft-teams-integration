@@ -9,7 +9,7 @@
         {
             "activityTitle": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
             "activitySubtitle": "You can view/update/extend the promotions from the actions below",
-            "activityImage": "",
+            "activityImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/promotion.png",
             "facts": [{
                     "name": "",
                     "value": "<div><div style=\"overflow:hidden;position:absolute;right:0px;\"><img width=\"1\" height=\"1\" style=\"position:relative;opacity:0.4;display:block;\" src=\"${backgroundImageUrl}\"></img></div><div style=\"top: 0px;left: 0px;position: absolute;width: 100%;height: 100%;border: white 2px solid;\"></div></div>"

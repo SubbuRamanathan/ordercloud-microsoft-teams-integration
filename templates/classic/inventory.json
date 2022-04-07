@@ -8,7 +8,7 @@
     "sections": [{
         "activityTitle": "Reminder: A Product('${Name}') is running low on stock!",
         "activitySubtitle": "You can update inventory or contact supplier from the actions below",
-        "activityImage": "",
+        "activityImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/inventory.png",
         "facts": [{
             "name": "Name",
             "value": "${Name}"

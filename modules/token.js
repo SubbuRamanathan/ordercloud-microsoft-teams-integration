@@ -11,6 +11,8 @@ class Token {
                 this.expires = new Date();
                 this.expires.setSeconds(this.expires.getSeconds() + tokenDetails.expires_in);
                 return this.token;
+            }).catch(function(error){
+                throw error;
             });
         }
         return Promise.resolve(this.token);
@@ -26,6 +28,9 @@ class Token {
                 throw new Error('Unable to retrieve Access Token. Please Validate your OrderCloud Authorization Configurations.');
     
             return response.data;
+        }).catch(function(error){
+            error.message = `An Error occurred while fetching the Access Token. Please validate the OrderCloud Settings. \n${error.message}`;
+            throw error;
         });
     }
 }

@@ -8,7 +8,7 @@
     "sections": [{
         "activityTitle": "Reminder: An Order('${ID}') is awaiting approval!",
         "activitySubtitle": "You can approve/decline/view the orders from the actions below",
-        "activityImage": "",
+        "activityImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/approval.png",
         "facts": [{
             "name": "Total",
             "value": "${Total}"

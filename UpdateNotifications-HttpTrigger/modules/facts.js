@@ -26,7 +26,7 @@ const getFacts = function (apiResponseDetails) {
       name: factName,
       value: getValue(apiResponseDetails, factName)
     };
-    if (factInfo)
+    if (factInfo.value)
       factsInfo.push(factInfo);
   });
 

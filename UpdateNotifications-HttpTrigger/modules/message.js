@@ -38,7 +38,7 @@ const getMessageCardInfo = function (request, operationIdOverride) {
   let messageCardInfo = {
     title: replaceParams(configData.title, { status: status.text }),
     subtitle: configData.subtitle,
-    image: getAssociatedProductImage(responseBody) ?? configData.fallbackImage,
+    image: getAssociatedProductImage(responseBody) ?? configData.image,
     themeColor: status.color
   };
   messageCardInfo = populateAllParamsFromApi(messageCardInfo, apiResponseDetails, '');

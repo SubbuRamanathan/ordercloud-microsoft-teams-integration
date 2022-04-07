@@ -11,7 +11,7 @@ exports.send = async function (teamsWebhookUrl, messageCard) {
     return 'Notification posted to Teams successfully!';
   }
   catch(error){
-    error.message = `${error.message} \nTeams Webhook:${teamsWebhookUrl} \nMessage: ${messageCard}`;
+    error.message = `${error.message} \nTeams Webhook:${teamsWebhookUrl} \nMessage: ${JSON.stringify(messageCard)}`;
     throw error;
   }
 }

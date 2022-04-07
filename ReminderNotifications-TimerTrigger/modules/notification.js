@@ -1,20 +1,19 @@
 const ordercloud = require("../../modules/ordercloud.js");
-const teamsWebhook = require("../../modules/webhook.js");
+const teamsWebhook = require("../../modules/teamswebhook.js");
 const log = require("../../modules/log");
 const { replaceParams, replaceJSONParams, getMessageTemplate, applyAppearances } = require("../../modules/utils.js");
 
 exports.send = function(config, accessToken, operationIdOverride){
-    try{
-        ordercloud.invoke(parseQuery(config.query), accessToken).then(apiResponse => {
-            apiResponse.data.Items.forEach(result => {
-                const messageCard = composeMessage(config.template, result);
-                teamsWebhook.send(config.connectorUrl, messageCard);
+    ordercloud.invoke(parseQuery(config.query), accessToken).then(apiResponse => {
+        apiResponse.data.Items.forEach(result => {
+            const messageCard = composeMessage(config.template, result);
+            teamsWebhook.send(config.connectorUrl, messageCard).catch(function(error){
+                log.exception(error, operationIdOverride, 'message', config.template);
             });
         });
-    }
-    catch(error){
+    }).catch(function(error){
         log.exception(error, operationIdOverride, 'message', config.template);
-    }
+    });
 }
 
 const composeMessage = function(templateName, result){

@@ -1,4 +1,4 @@
-const teamsWebhook = require("../modules/webhook.js");
+const teamsWebhook = require("../modules/teamswebhook.js");
 const updateNotificationMessage = require("./modules/message.js");
 const log = require("../modules/log.js");
 const { isValidRequest } = require("./modules/validation.js");
@@ -14,7 +14,7 @@ module.exports = async function (context, request) {
     if (apiResponseDetails && isValidRequest(request)) {
         try {
             const messageCard = updateNotificationMessage.compose(request, operationIdOverride);
-            responseMessage = teamsWebhook.send(apiResponseDetails.ConfigData.webhook, messageCard);
+            responseMessage = await teamsWebhook.send(apiResponseDetails.ConfigData.webhook, messageCard);
             status = 200;
             log.trace(responseMessage, operationIdOverride);
         } 

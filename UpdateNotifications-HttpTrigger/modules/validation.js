@@ -26,7 +26,7 @@ const isValidSecret = function (request) {
   if (process.env.ORDERCLOUD_WEBHOOK_SECRET != '') {
     var incomingEncryptedSecret = request.headers["x-oc-hash"];
     var computedEncryptedSecret = crypto.createHmac('SHA256', process.env.ORDERCLOUD_WEBHOOK_SECRET)
-      .update(JSON.stringify(request.body)).digest('base64');
+      .update(request.rawBody).digest('base64');
     if (incomingEncryptedSecret !== computedEncryptedSecret) {
       return false;
     }
