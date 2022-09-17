@@ -7,7 +7,7 @@
     "ORDERCLOUD_API_HOST": "https://sandboxapi.ordercloud.io",
     "ORDERCLOUD_API_CLIENTID": "",
     "ORDERCLOUD_API_CLIENTSECRET": "",
-    "ORDERCLOUD_WEBHOOK_SECRET": "",
+    "OC_WEBHOOK_HASH_KEY": "",
     "Reminders.Approval.ConnectorUrl": "",
     "Reminders.Promotion.ConnectorUrl": "",
     "Reminders.Inventory.ConnectorUrl": "",
@@ -19,7 +19,7 @@
     "ButtonBackgroundColor": "#65acc8",
     "NotificationBackgroundImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/teams-background.png",
     "IncludeLogIDInNotifications": true,
-    "ReminderNotificationsLimitPerScheduledRun": 15,
+    "ReminderNotificationsLimitPerScheduledRun": 10,
     "AzureWebJobs.Reminders-TimerTrigger.Disabled": "false"
   }
 }

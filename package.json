@@ -7,8 +7,8 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "@ordercloud/catalyst": "^1.1.3",
     "applicationinsights": "^2.2.2",
-    "axios": "^0.26.0",
-    "crypto": "^1.0.1"
+    "axios": "^0.26.0"
   }
 }

@@ -11,7 +11,7 @@ module.exports = async function (context, request) {
     var operationIdOverride = {"ai.operation.id":context.traceContext.traceparent};
 
     const apiResponseDetails = request.body;
-    if (apiResponseDetails && isValidRequest(request)) {
+    if (apiResponseDetails && await isValidRequest(request)) {
         try {
             const messageCard = updateNotificationMessage.compose(request, operationIdOverride);
             responseMessage = await teamsWebhook.send(apiResponseDetails.ConfigData.webhook, messageCard);

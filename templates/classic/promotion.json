@@ -8,7 +8,7 @@
     "sections": [
         {
             "activityTitle": "Reminder: A Promotion('${Name}') is expiring tomorrow!",
-            "activitySubtitle": "You can view/update/extend the promotions from the actions below",
+            "activitySubtitle": "You can view/update/extend the promotions by navigating to the site from the actions below",
             "activityImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/promotion.png",
             "facts": [
                 {

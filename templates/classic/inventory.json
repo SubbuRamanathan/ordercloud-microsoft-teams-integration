@@ -7,7 +7,7 @@
     "summary": "Reminder: A Product('${Name}') is running low on stock!",
     "sections": [{
         "activityTitle": "Reminder: A Product('${Name}') is running low on stock!",
-        "activitySubtitle": "You can update inventory or contact supplier from the actions below",
+        "activitySubtitle": "You can update inventory or contact supplier by navigating to the site from the actions below",
         "activityImage": "https://raw.githubusercontent.com/SubbuRamanathan/ordercloud-microsoft-teams-integration/master/images/inventory.png",
         "facts": [{
             "name": "Name",
