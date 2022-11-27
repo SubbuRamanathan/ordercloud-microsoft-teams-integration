@@ -4,7 +4,7 @@ Last Updated: 05-Apr-2022
 
 This Terms of Use applies to all of the below elements involved in this OrderCloud + Microsoft Teams integration:
 
-*   Microsoft Teams Web/Desktop/Mobile App ('Proconnect for OrderCloud')
+*   Microsoft Teams Web/Desktop/Mobile App ('TeamConnect for OrderCloud')
 *   Azure Function App (deployed to the user's Azure instance)
 
 ## Accepting these Terms

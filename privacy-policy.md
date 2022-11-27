@@ -2,7 +2,7 @@
 ## What This Policy Covers
 This Privacy Policy applies to all of the below elements involved in this OrderCloud + Microsoft Teams integration:
 
-*   Microsoft Teams Web/Desktop/Mobile App ('Proconnect for OrderCloud')
+*   Microsoft Teams Web/Desktop/Mobile App ('TeamConnect for OrderCloud')
 *   Azure Function App (deployed to the user's Azure instance)
 
 ## Does this module/connector collect any information?
